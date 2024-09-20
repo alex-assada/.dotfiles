@@ -8,6 +8,7 @@ alias logout='i3-msg exit'
 alias xpl='gh copilot explain'
 alias fzf='fzf --preview="batcat --style=numbers --color=always --line-range :500 {}" --color=16'
 alias fzn='fzf --preview="batcat --style=numbers --color=always --line-range :500 {}" --color=16 | xargs -r nvim'
+alias vpn_toggle='vpn_toggle.sh'
 
 # Functions
 #combined cd + ls command
