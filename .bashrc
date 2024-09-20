@@ -125,7 +125,7 @@ export PATH="~/.local/share/flatpak/:$PATH"
 export PATH="/opt/nvim-linux64/bin:$PATH"
 
 #hyperx-cloud-ii-wireless battery utility path
-export PATH="/opt/HyperXCloudIIWireless/target/release/:$PATH"
+export PATH="/opt/hyper_x_Linux/:$PATH"
 
 #pulseaudio stuff for polybar - NOT DONE YET
 export PATH="~/.config/polybar/scripts/:$PATH"

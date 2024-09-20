@@ -34,7 +34,7 @@ toggle_plex() {
  #show mouse and headset battery %
 allbat() {
   # Capture the output of the cli_app command
-  headset_output=$(/opt/HyperXCloudIIWireless/target/release/cli_app)
+  headset_output=$(/opt/hyper_x_Linux/cli_app)
   
   # Extract the battery percentage for the headset
   headset_battery=$(echo "$headset_output" | grep 'Battery level:' | awk '{print $3}')
@@ -45,6 +45,7 @@ allbat() {
   # Print the battery percentages with the desired format
   echo "Headset: ${headset_battery}"
   echo "Mouse: ${mouse_battery}"
+  dossbat
 }
 
 mbat() {
@@ -54,12 +55,22 @@ mbat() {
 
 hbat() {
   # Capture the output of the cli_app command
-  headset_output=$(/opt/HyperXCloudIIWireless/target/release/cli_app)
+  headset_output=$(/opt/hyper_x_Linux/cli_app)
   
   # Extract the battery percentage for the headset
   headset_battery=$(echo "$headset_output" | grep 'Battery level:' | awk '{print $3}')
   echo "Headset: ${headset_battery}"
 }
+
+dossbat() {
+  # Capture the output of the cli_app command
+  doss_output=$(upower -i /org/freedesktop/UPower/devices/headset_dev_FC_58_FA_E9_3D_BC)
+  # Extract the battery percentage for the speaker
+  doss_battery=$(echo "$doss_output" | grep 'percentage:' | awk '{print $2}')
+  echo "DOSS: ${doss_battery}"
+}
+
+
 # ----------------------------------------------------------------------------
 
 #turn monitors off without putting system to sleep (same as letting pc idle for 5mins)
