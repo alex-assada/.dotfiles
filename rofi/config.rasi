@@ -1,0 +1,30 @@
+configuration{
+    modi: "run,window,combi";
+    combi-modi: "run,window,drun";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-combi: " 🖥️  All ";
+    display-run: " 🏃  Run ";
+    display-window: " ";
+
+    kb-remove-char-back: "BackSpace,Shift+BackSpace";
+    kb-mode-complete: "Control+m";
+    kb-remove-to-eol: "";
+    kb-accept-entry: "Return,KP_Enter";
+    kb-move-char-forward: "Right,Alt+l";
+    kb-move-char-back: "Left,Alt+h";
+
+    kb-move-word-forward: "Control+l";
+    kb-move-word-back: "Control+h";
+    kb-row-up: "Up,Control+k";
+    kb-row-down: "Down,Control+j";
+
+    //sidebar-mode: true;
+}
+
+@theme "kanagawa-wave.rasi"

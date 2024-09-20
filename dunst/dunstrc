@@ -1,0 +1,66 @@
+[global]
+  # Follow mouse (pointer)
+  follow = mouse
+
+  # Define a class for the window.
+  #class = "Dunst"
+
+  # Whether or not dunst should print debug messages
+  verbosity = 0
+
+  # Which monitor should the notifications be displayed on
+  monitor = 0
+
+  # When to stop showing new notifications
+  # 0 never
+  # -1 always
+  # <seconds> number of seconds before the last notification is dismissed
+  timeouts = true
+
+  # Window dimensions
+  geometry = "300x5-15+35"
+  shrink = true
+  transparency = 0
+  border_width = 2
+
+  # Padding between text and sides
+  padding = 8
+
+  # Width of the separator line (0 to disable)
+  separator_height = 2
+
+  # Sort notifications by urgency before displaying them
+  sort = no
+
+  # Show indicators for URLs and Actions
+  show_indicators = yes
+
+  # Word wrap at specified width
+  word_wrap = yes
+
+  # Allow for closing via mouse
+  mouse = no
+
+  # Prevent the same notifications from displaying within this period (seconds)
+  ignore_duplicate_timeout = 2
+
+  # Paths to browse for icons
+  icon_path = /usr/share/icons/hicolor/48x48:/usr/share/icons/gnome/48x48
+
+  # Frame color
+  frame_color = "#222222"
+
+[urgency_low]
+  background = "#222222"
+  foreground = "#888888"
+  frame_color = "#222222"
+
+[urgency_normal]
+  background = "#1f1f28"
+  foreground = "#dcd7ba"
+  frame_color = "#1f1f28"
+
+[urgency_critical]
+  background = "#c34043"
+  foreground = "#dcd7ba"
+  frame_color = "#c34043"
