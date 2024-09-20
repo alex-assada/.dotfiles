@@ -25,6 +25,11 @@ W() {
     nvim -c "setlocal buftype=nofile bufhidden=wipe" -c "nnoremap <buffer> q :q!<CR>" -
 }
 
+#plex script for toggling on and off the server
+toggle_plex() {
+  ~/.config/scripts/toggle_plex.sh
+}
+
 # -------------------------MOUSE & HEADSET BATTERY-----------------------------
  #show mouse and headset battery %
 allbat() {

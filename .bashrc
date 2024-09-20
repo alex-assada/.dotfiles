@@ -139,11 +139,6 @@ export PATH="~/.cargo/bin/:$PATH"
 #fzf path
 export PATH="~/.fzf/bin:$PATH"
 
-#plex script for toggling on and off the server
-toggle_plex() {
-  /usr/local/bin/toggle_plex.sh
-}
-
 #nvm stuff
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -162,5 +157,5 @@ eval "$(oh-my-posh init bash --config /home/linuxbrew/.linuxbrew/opt/oh-my-posh/
 #set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
-
 export PATH=$PATH:/home/alex/.spicetify
+
