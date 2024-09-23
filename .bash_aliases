@@ -9,6 +9,7 @@ alias xpl='gh copilot explain'
 alias fzf='fzf --preview="batcat --style=numbers --color=always --line-range :500 {}" --color=16'
 alias fzn='fzf --preview="batcat --style=numbers --color=always --line-range :500 {}" --color=16 | xargs -r nvim'
 alias vpn_toggle='vpn_toggle.sh'
+alias sinks='~/.config/scripts/choose-audio-output.sh'
 
 # Functions
 #combined cd + ls command
