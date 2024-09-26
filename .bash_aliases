@@ -9,6 +9,7 @@ alias xpl='gh copilot explain'
 alias fzf='fzf --preview="batcat --style=numbers --color=always --line-range :500 {}" --color=16'
 alias fzn='fzf --preview="batcat --style=numbers --color=always --line-range :500 {}" --color=16 | xargs -r nvim'
 alias vpn_toggle='vpn_toggle.sh'
+alias sink='~/.config/scripts/choose-audio-output.sh'
 alias sinks='~/.config/scripts/choose-audio-output.sh'
 
 # Functions
@@ -47,7 +48,7 @@ allbat() {
   # Print the battery percentages with the desired format
   echo "Headset: ${headset_battery}"
   echo "Mouse: ${mouse_battery}"
-  dossbat
+  #dossbat #uncomment if running DOSS bluetooth speaker
 }
 
 mbat() {
@@ -64,13 +65,14 @@ hbat() {
   echo "Headset: ${headset_battery}"
 }
 
-dossbat() {
-  # Capture the output of the cli_app command
-  doss_output=$(upower -i /org/freedesktop/UPower/devices/headset_dev_FC_58_FA_E9_3D_BC)
-  # Extract the battery percentage for the speaker
-  doss_battery=$(echo "$doss_output" | grep 'percentage:' | awk '{print $2}')
-  echo "DOSS: ${doss_battery}"
-}
+# uncomment if running DOSS bluetooth speaker
+# dossbat() {
+#   # Capture the output of the cli_app command
+#   doss_output=$(upower -i /org/freedesktop/UPower/devices/headset_dev_FC_58_FA_E9_3D_BC)
+#   # Extract the battery percentage for the speaker
+#   doss_battery=$(echo "$doss_output" | grep 'percentage:' | awk '{print $2}')
+#   echo "DOSS: ${doss_battery}"
+# }
 
 
 # ----------------------------------------------------------------------------
