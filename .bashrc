@@ -1,3 +1,4 @@
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -158,4 +159,3 @@ eval "$(oh-my-posh init bash --config /home/linuxbrew/.linuxbrew/opt/oh-my-posh/
 eval "$(fzf --bash)"
 
 export PATH=$PATH:/home/alex/.spicetify
-

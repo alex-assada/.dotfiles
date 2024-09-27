@@ -1,3 +1,4 @@
+
 # Aliases
 alias bt='bluetoothctl'
 alias :q='exit'
@@ -81,4 +82,3 @@ hbat() {
 scroff() {
   xset dpms force off
 }
-
