@@ -21,7 +21,7 @@ return {
     workspaces = {
       {
         name = "work",
-        path = "~/Documents/work/",
+        path = "~/Documents/ebox-work/",
       },
     },
 
