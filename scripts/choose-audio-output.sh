@@ -1,17 +1,12 @@
-
 #!/bin/bash
 
 # Define your sinks
 HEADPHONES="alsa_output.usb-HP__Inc_HyperX_Cloud_II_Wireless_0-00.analog-stereo"
 SPEAKERS="alsa_output.usb-ZhuHai_JieLi_Technology_EDIFIER_G2000_20160823-01.analog-stereo"
-REMAPPED_SINK="my-sink"
 
-# Load the remap sink for speakers if not already loaded
-if ! pactl list short modules | grep -q "$REMAPPED_SINK"; then
-    pactl load-module module-remap-sink sink_name=$REMAPPED_SINK \
-    channel_map=front-left,front-right \
-    master_channel_map=front-right,front-left > /dev/null 2>&1
-fi
+# RUN THIS COMMAND TO SWAP LEFT AND RIGHT CHANNELS:
+# pactl load-module module-remap-sink sink_name=my-sink channel_map=front-left,front-right master_channel_map=front-right,front-left
+# SPEAKERS="my-sink"
 
 # List all sinks and store in an array
 sinks=($(pactl list short sinks | awk '{print $2}'))
@@ -25,7 +20,7 @@ fi
 # Display available sinks with friendly names
 echo "Choose a sink:"
 echo "1) Headphones"
-echo "2) Speakers (swapped channels)"
+echo "2) Speakers"
 
 # Prompt user for choice
 read -p "Enter the number of your choice: " choice
@@ -34,11 +29,9 @@ read -p "Enter the number of your choice: " choice
 case $choice in
     1)
         selected_sink="$HEADPHONES"
-        # Unload the remap sink if headphones are selected
-        pactl unload-module "$REMAPPED_SINK" > /dev/null 2>&1
         ;;
     2)
-        selected_sink="$REMAPPED_SINK" # Use the remapped sink for speakers
+        selected_sink="$SPEAKERS"
         ;;
     *)
         echo "Invalid choice. Please run the script again."
