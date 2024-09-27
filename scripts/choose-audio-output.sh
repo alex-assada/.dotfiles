@@ -2,7 +2,11 @@
 
 # Define your sinks
 HEADPHONES="alsa_output.usb-HP__Inc_HyperX_Cloud_II_Wireless_0-00.analog-stereo"
-SPEAKERS="alsa_output.usb-ZhuHai_JieLi_Technology_EDIFIER_G2000_20160823-01.analog-stereo"
+# SPEAKERS="alsa_output.usb-ZhuHai_JieLi_Technology_EDIFIER_G2000_20160823-01.analog-stereo"
+
+# RUN THIS COMMAND TO SWAP LEFT AND RIGHT CHANNELS:
+# pactl load-module module-remap-sink sink_name=my-sink channel_map=front-left,front-right master_channel_map=front-right,front-left
+SPEAKERS="my-sink"
 
 # List all sinks and store in an array
 sinks=($(pactl list short sinks | awk '{print $2}'))
