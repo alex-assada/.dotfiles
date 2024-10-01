@@ -224,7 +224,7 @@ bindsym $mod+r mode "resize"
 # --------------------------- ADDED BY ME -------------------------------
 
 # Disable mouse acceleration
-exec --no-startup-id xinput --set-prop 12 "libinput Accel Profile Enabled" 0, 1
+exec --no-startup-id xinput --set-prop 13 "libinput Accel Profile Enabled" 0, 1
 # Set the correct monitors (left and right)
 exec --no-startup-id xrandr --output DP-0 --auto --output DP-2 --auto --right-of DP-0
 
