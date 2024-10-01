@@ -3,6 +3,8 @@
 # Define your sinks
 HEADPHONES="alsa_output.usb-HP__Inc_HyperX_Cloud_II_Wireless_0-00.analog-stereo"
 SPEAKERS="alsa_output.usb-ZhuHai_JieLi_Technology_EDIFIER_G2000_20160823-01.analog-stereo"
+AIRPODS="bluez_output.B8_21_1C_5F_29_E8.1"
+
 
 # RUN THIS COMMAND TO SWAP LEFT AND RIGHT CHANNELS:
 # pactl load-module module-remap-sink sink_name=my-sink channel_map=front-left,front-right master_channel_map=front-right,front-left
@@ -21,6 +23,7 @@ fi
 echo "Choose a sink:"
 echo "1) Headphones"
 echo "2) Speakers"
+echo "3) Airpods"
 
 # Prompt user for choice
 read -p "Enter the number of your choice: " choice
@@ -32,6 +35,9 @@ case $choice in
         ;;
     2)
         selected_sink="$SPEAKERS"
+        ;;
+    3)
+        selected_sink="$AIRPODS"
         ;;
     *)
         echo "Invalid choice. Please run the script again."
