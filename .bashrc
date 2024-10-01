@@ -122,8 +122,10 @@ export PATH="~/.local/share/flatpak/exports/bin:$PATH"
 export PATH="/var/lib/flatpak/exports/bin/:$PATH"
 export PATH="~/.local/share/flatpak/:$PATH"
 
-#nvim path
+#nvim path and make it default editor
 export PATH="/opt/nvim-linux64/bin:$PATH"
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 #hyperx-cloud-ii-wireless battery utility path
 export PATH="/opt/hyper_x_Linux/:$PATH"
