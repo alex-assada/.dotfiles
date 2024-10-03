@@ -161,3 +161,6 @@ eval "$(oh-my-posh init bash --config /home/linuxbrew/.linuxbrew/opt/oh-my-posh/
 eval "$(fzf --bash)"
 
 export PATH=$PATH:/home/alex/.spicetify
+
+#zoxide
+eval "$(zoxide init bash)"
