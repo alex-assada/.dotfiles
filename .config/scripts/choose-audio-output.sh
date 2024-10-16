@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Define your sinks
-HEADPHONES="alsa_output.usb-HP__Inc_HyperX_Cloud_II_Wireless_0-00.analog-stereo"
-SPEAKERS="alsa_output.usb-ZhuHai_JieLi_Technology_EDIFIER_G2000_20160823-01.analog-stereo"
-AIRPODS="bluez_output.B8_21_1C_5F_29_E8.1"
+# Dynamically get the sinks by name
+HEADPHONES=$(pactl list short sinks | grep -i "HyperX_Cloud_II" | awk '{print $2}')
+SPEAKERS=$(pactl list short sinks | grep -i "G2000" | awk '{print $2}')
+AIRPODS=$(pactl list short sinks | grep -i "B8_21_1C_5F_29_E8" | awk '{print $2}')
 
 # Get current sink to highlight it in the list
 currentsink=$(pactl get-default-sink)
